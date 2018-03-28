@@ -33,7 +33,7 @@ angular.module('app', []).component('todoList', {
       </div>
 
       <ul>
-          <li ng-repeat="todo in $ctrl.todos" ng-click="$ctrl.removeToDo($index)"> {{todo}}</li>
+          <li ng-repeat="todo in $ctrl.todos track by $index" ng-click="$ctrl.removeToDo($index)"> {{todo}}</li>
       </ul>
       <hr />
       <pre>{{$ctrl.todos | json}} </pre>
